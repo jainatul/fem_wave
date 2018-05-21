@@ -1,0 +1,18 @@
+tii = 5e-6;
+Nr = 80;
+Nt = 6561;
+Nz = Nt/(Nr+1)-1;
+
+Urtii = zeros(Nz+1,Nr+1);
+Uztii = zeros(Nz+1,Nr+1);
+Rtii = zeros(Nz+1,Nr+1);
+Ztii = zeros(Nz+1,Nr+1);
+
+for ii=1:Nz+1
+    for jj=1:Nr+1
+        Urtii(ii,jj) = U(2*jj-1+(ii-1)*(Nr+1)*2,tii);
+        Uztii(ii,jj) = U( 2*jj +(ii-1)*(Nr+1)*2,tii);
+        Rtii(ii,jj) = rz(1,jj +(ii-1)*(Nr+1));
+        Ztii(ii,jj) = rz(2,jj +(ii-1)*(Nr+1));
+    end
+end

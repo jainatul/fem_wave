@@ -1,5 +1,7 @@
+function [N] = shapeFns5
+
 syms zita ita s;
-nfns=25;
+% nfns=25;
 z1 = -1; z2 = -0.5; z3 =0; z4= 0.5; z5= 1;
 ita1=-1; ita2=-.5; ita3=0; ita4=.5; ita5=1;
 l = [s;s;s;s;s];
@@ -38,6 +40,4 @@ N = l*transpose(n);
 N= N(:);  % (l1n1;l2n1;l3n1;l4n1;l5n1;l1n2;l2n2;l3n2......l4n5;l5n5)
 
 
-
-
- clear n l z1 z2 z3 z4 z5 ita1 ita2 ita3 ita4 ita5 s i j k ;
+end

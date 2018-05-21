@@ -1,6 +1,7 @@
+function [Mee5] = Mmatrix6(N,r,rho,jaco,nfns)
 Me = N*transpose(N)*rho*2*pi*r*jaco;  
  Mee4 = zeros(nfns ,nfns);
- point=5;
+ point=6;
  xw = GaussPoints(point);
 %  tic
  
@@ -20,4 +21,5 @@ Me = N*transpose(N)*rho*2*pi*r*jaco;
      Mee5(2:2:2*nfns,2:2:2*nfns)= Mee4;
    
      clear Mee4 zita ita a1 a2 xw point Me;
+end
      
